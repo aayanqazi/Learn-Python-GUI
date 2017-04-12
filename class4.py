@@ -10,8 +10,12 @@ label_1.grid(row=0,sticky=E)
 label_2.grid(row=1,sticky=E)
 entry_1.grid(row=0, column=1)
 entry_2.grid(row=1, column=1)
-
 c = Checkbutton(root, text="Keep Me Logged in")
 c.grid(columnspan=2)
+def printData():
+    print(entry_1.get())
+    print(entry_2.get())
 
+button_1 = Button(root, text="Login", command=printData)
+button_1.grid(row=3, column=1)
 root.mainloop()
